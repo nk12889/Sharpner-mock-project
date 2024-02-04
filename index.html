@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoteBook App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="Heading">
+        <h1>NoteBook</h1>
+        <label for="" id="search">Search Notes :</label>
+        <input type="search" id="search-input" oninput="searchNotes()">
+    </div>
+    <div id="total-notes">
+        <h5>Total Notes :</h5>
+        <h5 id="total-count">0</h5>
+    </div>
+    <div id="showing">
+        <h5>Showing :</h5>
+        <h5 id="showing-count">0</h5>
+    </div>
+
+    <div id="container1">
+        <label for="note-title">Note Title :</label>
+        <input type="text" id="note-title">
+    </div>
+    <div id="container2">
+        <h4>Notes Desc :</h4>
+        <textarea id="textarea" cols="30" rows="3"></textarea>
+    </div>
+    <div id="add-button">
+        <button onclick="addToNotebook()">Add To Book</button>
+    </div>
+
+    <div id="note-list">
+        <!-- Display notes here -->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
