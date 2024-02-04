@@ -5,8 +5,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 async function updateNoteCounts() {
     try {
-        const response = await axios.get('https://crudcrud.com/api/5cfad60d03294807aa64b5106229320e/notes'); // Replace with your actual API endpoint
-        const notes = response.data;
+        const response = await axios.get('https://crudcrud.com/api/5cfad60d03294807aa64b5106229320e/notes'); 
         const totalCount = notes.length;
 
         document.getElementById('total-count').innerText = totalCount;
@@ -18,7 +17,7 @@ async function updateNoteCounts() {
 
 async function displayNotes() {
     try {
-        const response = await axios.get('https://crudcrud.com/api/5cfad60d03294807aa64b5106229320e/notes'); // Replace with your actual API endpoint
+        const response = await axios.get('https://crudcrud.com/api/5cfad60d03294807aa64b5106229320e/notes'); 
         const notes = response.data;
 
         const noteListContainer = document.getElementById('note-list');
@@ -48,7 +47,7 @@ async function addToNotebook() {
     }
 
     try {
-        await axios.post('https://crudcrud.com/api/5cfad60d03294807aa64b5106229320e/notes', { title: noteTitle, description: noteDesc }); // Replace with your actual API endpoint
+        await axios.post('https://crudcrud.com/api/5cfad60d03294807aa64b5106229320e/notes', { title: noteTitle, description: noteDesc }); 
         await updateNoteCounts();
         await displayNotes();
         clearInputs();
@@ -59,7 +58,7 @@ async function addToNotebook() {
 
 async function deleteNoteAndUpdateCounts(noteId) {
     try {
-        await axios.delete(`https://crudcrud.com/api/5cfad60d03294807aa64b5106229320e/notes/${noteId}`); // Replace with your actual API endpoint
+        await axios.delete(`https://crudcrud.com/api/5cfad60d03294807aa64b5106229320e/notes/${noteId}`); 
         await updateNoteCounts();
         await displayNotes();
     } catch (error) {
