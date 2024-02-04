@@ -74,7 +74,7 @@ function clearInputs() {
 async function searchNotes() {
     const searchTerm = document.getElementById('search-input').value.toLowerCase();
     try {
-        const response = await axios.get('https://crudcrud.com/api/5cfad60d03294807aa64b5106229320e/notes'); // Replace with your actual API endpoint
+        const response = await axios.get('https://crudcrud.com/api/5cfad60d03294807aa64b5106229320e/notes'); 
         const notes = response.data;
 
         const filteredNotes = notes.filter((note) => note.title.toLowerCase().includes(searchTerm));
